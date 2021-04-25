@@ -10,6 +10,10 @@
 
 -
 
+## v0.0.4 && v0.0.5
+
+- just me fighting with npm. functionality remains the same.
+
 ## v 0.0.3
 
 ### Fixed
