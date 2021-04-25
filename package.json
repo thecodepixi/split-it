@@ -1,0 +1,17 @@
+{
+  "name": "split-it",
+  "version": "0.0.0",
+  "description": "a tiny package for splitting strings",
+  "main": "index.js",
+  "author": "Emily Harber (https://github.com/thecodepixi)",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "scripts": {
+    "test": "echo \"Running tests for version $npm_package_version...\" && jest",
+    "preversion": "yarn test",
+    "postversion": "git push --tags && yarn publish . --tag $npm_package_version && git push && echo \"Successfully released version $npm_package_version!\""
+  }
+}
