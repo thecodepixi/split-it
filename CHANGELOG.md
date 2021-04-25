@@ -8,7 +8,7 @@
 
 ### Fixed
 
--
+- Improve `.it` to handle combined returns and newlines.
 
 ## v 0.0.2
 

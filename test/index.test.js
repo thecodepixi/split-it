@@ -28,8 +28,10 @@ describe('Split', () => {
 
     test('splits a given string on line breaks and returns', () => {
       let str = 'hello\nfrom\rsplit-it';
+      let str2 = 'hello\r\nfrom\rsplit-it';
 
       expect(Split.it(str)).toEqual(expected);
+      expect(Split.it(str2)).toEqual(expected);
     });
   });
 

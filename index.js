@@ -9,7 +9,7 @@ class Split {
    * @param {string} str the string to split
    */
   it = (str) => {
-    return str.split(/,|:|\t|\r|\n/g);
+    return str.split(/,|:|\t|\r\n|\r|\n/g);
   };
 
   /**
