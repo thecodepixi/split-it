@@ -1,6 +1,6 @@
 {
   "name": "@pixi-pack/split-it",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a tiny package for splitting strings",
   "main": "index.js",
   "author": "Emily Harber (https://github.com/thecodepixi)",
