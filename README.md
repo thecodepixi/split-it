@@ -1,5 +1,6 @@
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 ![github test workflow status](https://github.com/thecodepixi/split-it/actions/workflows/run-test.yaml/badge.svg)
+![npm (scoped)](https://img.shields.io/npm/v/@pixi-pack/split-it)
 
 # split-it
 
