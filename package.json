@@ -1,10 +1,9 @@
 {
   "name": "@pixi-pack/split-it",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a tiny package for splitting strings",
   "main": "index.js",
   "author": "Emily Harber (https://github.com/thecodepixi)",
-  "type": "module",
   "repository": {
     "type": "GitHub",
     "url": "https://github.com/thecodepixi/split-it"
@@ -21,6 +20,6 @@
   "scripts": {
     "test": "echo \"Running tests for version $npm_package_version...\" && jest",
     "preversion": "yarn test",
-    "postversion": "git push --tags && yarn publish . --tag $npm_package_version && git push && echo \"Successfully released version $npm_package_version!\""
+    "postversion": "git push --tags && yarn publish . --tag $npm_package_version --access public && git push && echo \"Successfully released version $npm_package_version!\""
   }
 }
