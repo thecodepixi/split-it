@@ -1,4 +1,4 @@
-import Split from '../index';
+const Split = require('../index');
 
 const expected = ['hello', 'from', 'split-it'];
 

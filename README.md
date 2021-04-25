@@ -21,7 +21,9 @@ this package can be installed using either `npm` or `yarn`
 
 after adding the package to your project, you can import the main class `Split` to use the available methods:
 
-`import Split from 'split-it'`
+```js
+const Split = require('split-it');
+```
 
 ## Available Methods
 
