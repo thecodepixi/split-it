@@ -1,3 +1,6 @@
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+![github test workflow status](https://github.com/thecodepixi/split-it/actions/workflows/run-test.yaml/badge.svg)
+
 # split-it
 
 split-it is a tiny javascript package designed to provide convenience methods for splitting strings in a variety of ways.
