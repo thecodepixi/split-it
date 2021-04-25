@@ -12,11 +12,11 @@ this package can be installed using either `npm` or `yarn`
 
 ### `npm` installation
 
-`npm install split-it`
+`npm install @pixi-pack/split-it`
 
 ### `yarn` installation`
 
-`yarn add split-it`
+`yarn add @pixi-pack/split-it`
 
 ### Importing the package in your project
 
