@@ -17,4 +17,15 @@ describe('onDelimiter', () => {
     expect(Split.onDelimiter(str2, '1')).toEqual(expected);
     expect(Split.onDelimiter(str3, ',')).toEqual(expected);
   });
+
+  test('accurately splits when the delimiter must be escaped', () => {
+    let str = 'hello|from|split-it';
+    let str2 = 'hello?from?split-it';
+    let str3 = 'hello*from*split-it';
+    let expected = ['hello', 'from', 'split-it'];
+
+    expect(Split.onDelimiter(str, '|')).toEqual(expected);
+    expect(Split.onDelimiter(str2, '?')).toEqual(expected);
+    expect(Split.onDelimiter(str3, '*')).toEqual(expected);
+  });
 });
