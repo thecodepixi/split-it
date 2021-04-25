@@ -10,6 +10,10 @@
 
 -
 
-## v 0.1.0
+## v 0.0.2
 
-- Initial package release
+- whoops, fix package.json
+
+## v 0.0.1
+
+- Initial beta package release
