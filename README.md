@@ -61,7 +61,7 @@ Split.onDelimiter('hello|from|split-it', '|');
 
 want to contribute to `split-it`? sweet!
 if you'd like to contribute, please open an issue relating to the feature you'd like to work on,
-and then open a pr linked to your issue. when you open your pr, please add your changes to the [CHANGELOG](./CHANGELOG.md) under the `## added` or `## fixed` heading, as appropriate, with a link to your pr.
+and then open a pr linked to your issue. when you open your pr, please add your changes to the [CHANGELOG](./CHANGELOG.md) under the `### added` or `### fixed` heading, as appropriate, with a link to your pr.
 
 don't want to contribute code, but see something missing or broken? open an issue to report any bugs or errors you encounter.
 
