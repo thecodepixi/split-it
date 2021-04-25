@@ -1,3 +1,5 @@
+const SPECIAL = ['[', '^', '$', '.', '|', '?', '*', '+', '(', ')'];
+
 const Split = {
   /**
    * Accepts an optional delimiter argument.
@@ -5,7 +7,13 @@ const Split = {
    * @param str the string to split
    * @param del the chosen delimiter on which to split the given string
    */
-  on_delimiter: (str, del = null) => {
-    return str.split(/\s/g);
+  onDelimiter: (str, del = null) => {
+    if (del) {
+      let escape = SPECIAL.includes(del) ? '\\' : '';
+      let re = new RegExp(escape + del, 'g');
+      return str.split(re);
+    } else {
+      return str.split(/\s/g);
+    }
   },
 };
