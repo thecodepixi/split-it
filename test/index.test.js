@@ -1,4 +1,5 @@
 const Split = require('../index');
+const fs = require('fs');
 
 const expected = ['hello', 'from', 'split-it'];
 
@@ -64,6 +65,53 @@ describe('Split', () => {
       expect(Split.onDelimiter(str, '|')).toEqual(expected);
       expect(Split.onDelimiter(str2, '?')).toEqual(expected);
       expect(Split.onDelimiter(str3, '*')).toEqual(expected);
+    });
+  });
+
+  describe('.csv', () => {
+    const DATA = fs.readFileSync('airtravel.csv', { encoding: 'utf-8' });
+
+    test('splits csv data into a multi-array array', () => {
+      let parsed = Split.csv(DATA);
+
+      expect(parsed.length).toEqual(13);
+
+      parsed.forEach((arr) => {
+        expect(arr.length).toEqual(4);
+      });
+    });
+
+    test('removes headings when option is passed as false', () => {
+      let parsed = Split.csv(DATA, { headings: false });
+
+      expect(parsed.length).toEqual(12);
+
+      parsed.forEach((arr) => {
+        expect(arr.length).toEqual(3);
+      });
+    });
+
+    test('rotates data to make arrays of columns when option is passed', () => {
+      let parsed = Split.csv(DATA, { splitOnColumns: true });
+      let expectedHeadings = [
+        'Month',
+        'JAN',
+        'FEB',
+        'MAR',
+        'APR',
+        'MAY',
+        'JUN',
+        'JUL',
+        'AUG',
+        'SEP',
+        'OCT',
+        'NOV',
+        'DEC',
+      ];
+
+      expect(parsed.length).toEqual(4);
+      expect(parsed[0].length).toEqual(13);
+      expect(parsed[0]).toEqual(expectedHeadings);
     });
   });
 });

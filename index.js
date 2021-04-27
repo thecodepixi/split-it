@@ -27,6 +27,32 @@ class Split {
       return str.split(/\s/g);
     }
   };
+
+  /**
+   *
+   * @param {string} data the csv data to be manipulated
+   * @param options an object containing boolean values for "headings" and "splitOnColumns"
+   * @return {string[]}
+   */
+  csv = (data, { headings = true, splitOnColumns = false } = {}) => {
+    let rows = data.split(/\r\n|\n|\r/g).map((row) => row.split(/,\s+/g));
+    let returnData = [];
+
+    if (splitOnColumns) {
+      rows.forEach((row, index) => {
+        //  TO DO: FIGURE OUT HOW TO ROTATE THIS SHIT
+      });
+    } else {
+      returnData = rows;
+    }
+
+    if (!headings) {
+      returnData.shift();
+      returnData.forEach((row) => row.shift());
+    }
+
+    return returnData;
+  };
 }
 
 module.exports = new Split();
