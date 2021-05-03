@@ -32,16 +32,23 @@ class Split {
    *
    * @param {string} data the csv data to be manipulated
    * @param options an object containing boolean values for "headings" and "splitOnColumns"
-   * @return {string[]}
+   * @return {string[]} the passed in csv data will be split into an array of arrays, with each sub-array representing a single row or column of data. 
    */
   csv = (data, { headings = true, splitOnColumns = false } = {}) => {
     let rows = data.split(/\r\n|\n|\r/g).map((row) => row.split(/,\s+/g));
     let returnData = [];
 
     if (splitOnColumns) {
-      rows.forEach((row, index) => {
-        //  TO DO: FIGURE OUT HOW TO ROTATE THIS SHIT
-      });
+      console.log("columns")
+      let rowsLength = rows[0].length; // 4
+      for( let i = 0; i < rowsLength; i++) {
+        let j = 0;
+        returnData[i] = [];
+        while( j < 13) {
+          returnData[i].push( rows[j][i] );
+          j++
+        }
+      }
     } else {
       returnData = rows;
     }
