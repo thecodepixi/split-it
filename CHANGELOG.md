@@ -8,7 +8,7 @@
 
 ### Fixed
 
--
+- `Split` is now an object containing functions, instead of a class.
 
 ## v0.0.4 && v0.0.5
 
