@@ -39,7 +39,6 @@ class Split {
     let returnData = [];
 
     if (splitOnColumns) {
-      console.log("columns")
       let rowsLength = rows[0].length; // 4
       for( let i = 0; i < rowsLength; i++) {
         let j = 0;

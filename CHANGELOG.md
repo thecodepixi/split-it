@@ -4,7 +4,7 @@
 
 ### Added
 
--
+- `.csv` parses CSV data, with and without headers, and can optionally rotate the file to split on columns instead of rows. [87c4043]
 
 ### Fixed
 
